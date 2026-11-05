@@ -1,0 +1,63 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: 'DotGothic16', 'JetBrains Mono', 'Noto Sans JP', monospace;
+    user-select: none;
+    -webkit-user-select: none;
+    background-color: #030712;
+    color: #f1f5f9;
+  }
+}
+
+/* Lightweight CRT Scanline Effect (Non-blocking) */
+.crt-overlay {
+  position: relative;
+}
+.crt-overlay::before {
+  content: " ";
+  display: block;
+  position: absolute;
+  top: 0; left: 0; bottom: 0; right: 0;
+  background: repeating-linear-gradient(0deg, rgba(0, 0, 0, 0.15) 0px, rgba(0, 0, 0, 0.15) 1px, transparent 1px, transparent 3px);
+  z-index: 20;
+  pointer-events: none;
+  opacity: 0.7;
+}
+
+/* Custom retro scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #0f172a;
+}
+::-webkit-scrollbar-thumb {
+  background: #334155;
+  border-radius: 2px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #475569;
+}
+
+/* Windows classic beveled border simulation */
+.win-border {
+  border-top: 2px solid #cbd5e1;
+  border-left: 2px solid #cbd5e1;
+  border-right: 2px solid #0f172a;
+  border-bottom: 2px solid #0f172a;
+}
+
+.win-border-sunken {
+  border-top: 2px solid #0f172a;
+  border-left: 2px solid #0f172a;
+  border-right: 2px solid #475569;
+  border-bottom: 2px solid #475569;
+}
+
+
+[data-title-screen] button:focus {
+  outline: 2px solid #22d3ee;
+  outline-offset: 2px;
+}

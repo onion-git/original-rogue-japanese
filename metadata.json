@@ -1,0 +1,6 @@
+{
+  "name": "元祖 ローグ 日本語版 (Windows Edition)",
+  "description": "名作ローグ（Rogue 1980）の完全日本語版Windowsデスクトップスタイル。マウス、キーボード（テンキー/Vim/矢印）、ゲームパッド操作に完全対応。",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
